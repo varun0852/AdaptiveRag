@@ -77,7 +77,7 @@ QDRANT_DOCS_COLLECTION=documents
 MONGODB_URL=your_url
 MONGODB_DB_NAME=adaptive_rag
 
-6. 5. Run the backend
+5. Run the backend
 ```bash
 uvicorn src.main:app --reload --port 8000
 ```
