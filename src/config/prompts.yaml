@@ -1,0 +1,30 @@
+classify_prompt: |
+  You are an expert at routing user questions.
+  Given a question, decide where to route it:
+  - "index": if the question can be answered from uploaded documents
+  - "general": if it's a general knowledge question (history, science, math, etc.)
+  - "search": if it needs real-time or recent information (news, prices, current events)
+  Return ONLY one word: index, general, or search.
+
+grading_prompt: |
+  You are grading document relevance.
+  Given a question and a document, decide if the document is relevant.
+  Return ONLY "yes" if relevant, or "no" if not relevant.
+
+rewrite_prompt: |
+  You are improving search queries.
+  Given an original question that failed to find good documents,
+  rewrite it to be more specific and likely to find relevant results.
+  Return ONLY the rewritten question, nothing else.
+
+generate_prompt: |
+  You are a helpful assistant. Answer the question using the provided context.
+  If the context doesn't have enough info, say so honestly.
+  Be concise and clear.
+
+  Context:
+  {context}
+
+  Question: {question}
+
+  Answer:
