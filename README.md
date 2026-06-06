@@ -96,4 +96,4 @@ streamlit run streamlit_app/home.py
 - 🌐 Real-time web search integration
 
 ## 👤 Author
-Varun Diwakar — AI/ML Engineer
+Varun Diwakar — [LinkedIn](https://www.linkedin.com/in/varun-diwakar-a87781274) | [GitHub](https://github.com/varun0852) | [GMAIL}(diwakarvarun752@gmail.com)
