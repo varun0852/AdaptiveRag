@@ -1,4 +1,4 @@
-# 🧠 Adaptive RAG — LangGraph-Powered Agentic Chatbot
+# 🧠 AdaptiveRag — LangGraph-Powered Agentic RAG Chatbot
 
 An intelligent Retrieval-Augmented Generation (RAG) system that 
 dynamically routes user queries to the most appropriate knowledge 
