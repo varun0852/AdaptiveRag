@@ -6,7 +6,7 @@ An intelligent Retrieval-Augmented Generation (RAG) system that dynamically rout
 
 ## 🎬 Demo
 
-![AdaptiveRag Demo](docs/adaptiverag_demo.gif)
+![AdaptiveRag Demo](adaptiverag_demo.gif)
 
 ---
 
