@@ -124,7 +124,7 @@ streamlit run streamlit_app/home.py
 
 ## 👤 Author
 
-**Varun Diwakar** — AI/ML Engineer
+**Varun** — AI/ML Engineer
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/varun-diwakar-a87781274)
 [![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/varun0852)
