@@ -4,8 +4,8 @@ import os
 
 st.set_page_config(page_title="Chat", page_icon="💬", layout="wide")
 
-
-API_BASE = os.getenv("API_BASE_URL", "https://web-production-c7b0c.up.railway.app/")
+# Railway backend URL
+API_BASE = "https://web-production-c7b0c.up.railway.app/rag"
 
 if "session_id" not in st.session_state or not st.session_state.session_id:
     st.warning("Please go back to the home page and enter your name.")
