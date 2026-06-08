@@ -1,9 +1,11 @@
 import streamlit as st
 import requests
+import os
 
 st.set_page_config(page_title="Chat", page_icon="💬", layout="wide")
 
-API_BASE = "http://localhost:8000/rag"
+# ✅ Points to Railway backend — update this after Railway deployment
+API_BASE = os.getenv("API_BASE_URL", "https://YOUR-RAILWAY-URL.up.railway.app/rag")
 
 if "session_id" not in st.session_state or not st.session_state.session_id:
     st.warning("Please go back to the home page and enter your name.")
@@ -65,14 +67,14 @@ if user_input := st.chat_input("Ask anything..."):
                 response = requests.post(
                     f"{API_BASE}/query",
                     json={"query": user_input, "session_id": session_id},
-                    timeout=30
+                    timeout=60
                 )
                 if response.status_code == 200:
                     answer = response.json()["result"]["content"]
                 else:
                     answer = f"Error {response.status_code}: {response.text}"
             except Exception as e:
-                answer = f"Connection error: {e}\n\nMake sure FastAPI is running on port 8000."
+                answer = f"❌ Connection error: {e}\n\nThe backend may be starting up — please try again in 30 seconds."
 
         st.markdown(answer)
         st.session_state.messages.append({"role": "assistant", "content": answer})
