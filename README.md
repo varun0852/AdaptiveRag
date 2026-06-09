@@ -17,7 +17,7 @@ Upload any PDF or TXT → Ask questions → Get intelligent answers powered by L
 
 ## 🎬 Demo
 
-![AdaptiveRag Demo](docs/adaptiverag_demo.gif)
+![AdaptiveRag Demo](adaptiverag_demo.gif)
 
 ---
 
