@@ -2,7 +2,7 @@ import motor.motor_asyncio
 from src.config.settings import MONGODB_URL, MONGODB_DB_NAME
 from src.core.logger import get_logger
 
-logger = get_logger(_name_)
+logger = get_logger(__name__)
 
 try:
     client = motor.motor_asyncio.AsyncIOMotorClient(
