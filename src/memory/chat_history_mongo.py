@@ -5,7 +5,7 @@ logger = get_logger(__name__)
 
 async def save_message(session_id: str, role: str, content: str):
     if db is None:
-        logger.warning("MongoDB unavailable — skipping chat history save.")
+        logger.warning("MongoDB unavailable — skipping save.")
         return
     try:
         collection = db["chat_history"]
@@ -17,7 +17,7 @@ async def save_message(session_id: str, role: str, content: str):
     except Exception as e:
         logger.error(f"Failed to save message: {e}")
 
-async def get_chat_history(session_id: str):
+async def get_history(session_id: str):
     if db is None:
         logger.warning("MongoDB unavailable — returning empty history.")
         return []
