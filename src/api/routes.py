@@ -11,7 +11,6 @@ logger = get_logger(__name__)
 @router.post("/query")
 async def query_rag(request: QueryRequest):
     try:
-        # Save user message — silently skip if MongoDB fails
         try:
             await save_message(request.session_id, "user", request.query)
         except Exception as mongo_err:
@@ -28,7 +27,6 @@ async def query_rag(request: QueryRequest):
 
         answer = result.get("answer", "Sorry, I couldn't find an answer.")
 
-        # Save assistant message — silently skip if MongoDB fails
         try:
             await save_message(request.session_id, "assistant", answer)
         except Exception as mongo_err:
