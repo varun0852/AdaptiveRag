@@ -3,13 +3,13 @@
 
 An intelligent Retrieval-Augmented Generation (RAG) system that dynamically routes user queries to the most appropriate knowledge source using LangGraph-powered agentic workflows. Fully deployed with FastAPI backend on Railway and Streamlit frontend on Streamlit Cloud.
 
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://adaptiverag-2exurkjkfenfsb6n7mcpcp.streamlit.app/chat)
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://adaptiverag-2exurkjkfenfsb6n7mcpcp.streamlit.app/)
 
 ---
 
 ## 🚀 Live Demo
 
-🔗 **[Try the live app here](https://adaptiverag-2exurkjkfenfsb6n7mcpcp.streamlit.app/chat)**
+🔗 **[Try the live app here](https://adaptiverag-2exurkjkfenfsb6n7mcpcp.streamlit.app/)**
 
 Upload any PDF or TXT → Ask questions → Get intelligent answers powered by LangGraph agentic routing.
 
