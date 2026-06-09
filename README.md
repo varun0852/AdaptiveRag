@@ -1,18 +1,23 @@
+
 # 🧠 AdaptiveRag — LangGraph-Powered Agentic RAG Chatbot
 
-An intelligent Retrieval-Augmented Generation (RAG) system that dynamically routes user queries to the most appropriate knowledge source using LangGraph-powered agentic workflows.
+An intelligent Retrieval-Augmented Generation (RAG) system that dynamically routes user queries to the most appropriate knowledge source using LangGraph-powered agentic workflows. Fully deployed with FastAPI backend on Railway and Streamlit frontend on Streamlit Cloud.
 
----
-
-## 🎬 Demo
-
-![AdaptiveRag Demo](adaptiverag_demo.gif)
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://adaptiverag-2exurkjkfenfsb6n7mcpcp.streamlit.app/chat)
 
 ---
 
 ## 🚀 Live Demo
 
-Upload any PDF → Ask questions → Get intelligent answers powered by LangGraph agentic routing.
+🔗 **[Try the live app here](https://adaptiverag-2exurkjkfenfsb6n7mcpcp.streamlit.app/chat)**
+
+Upload any PDF or TXT → Ask questions → Get intelligent answers powered by LangGraph agentic routing.
+
+---
+
+## 🎬 Demo
+
+![AdaptiveRag Demo](docs/adaptiverag_demo.gif)
 
 ---
 
@@ -42,8 +47,36 @@ Each route includes:
 | Embeddings       | HuggingFace (all-MiniLM-L6-v2)  |
 | Web Search       | Tavily API                      |
 | Chat Memory      | MongoDB Atlas                   |
-| Backend          | FastAPI                         |
-| Frontend         | Streamlit                       |
+| Backend          | FastAPI (deployed on Railway)   |
+| Frontend         | Streamlit (deployed on Streamlit Cloud) |
+
+---
+
+## ✨ Features
+
+- 🔀 Adaptive query routing across 3 intelligent routes
+- 📄 PDF and TXT document upload & vector indexing
+- ✅ Document relevance grading before answering
+- 🔁 Automatic query rewriting when docs are irrelevant
+- 💬 Persistent chat history per session (MongoDB)
+- 🌐 Real-time web search integration via Tavily
+- 🚀 Fully deployed — accessible via public URL
+
+---
+
+## 🏗️ Architecture
+
+```
+Streamlit Frontend (Streamlit Cloud)
+        ↓ HTTP requests
+FastAPI Backend (Railway)
+        ↓
+LangGraph Agentic Workflow
+    ├── Qdrant Cloud (vector store)
+    ├── Groq LLM (Llama 3.3 70B)
+    ├── Tavily (web search)
+    └── MongoDB Atlas (chat memory)
+```
 
 ---
 
@@ -64,12 +97,16 @@ AdaptiveRag/
 │       ├── nodes.py           # Agent nodes
 │       ├── retriever_setup.py
 │       └── document_upload.py
-└── streamlit_app/        # Frontend UI
+├── streamlit_app/        # Frontend UI
+├── Procfile              # Railway deployment config
+├── railway.json          # Railway settings
+├── runtime.txt           # Python 3.11
+└── requirements.txt
 ```
 
 ---
 
-## 🔧 Setup & Installation
+## 🔧 Local Setup & Installation
 
 **1. Clone the repo**
 ```bash
@@ -80,7 +117,8 @@ cd AdaptiveRag
 **2. Create virtual environment**
 ```bash
 python -m venv venv
-venv\Scripts\activate
+venv\Scripts\activate   # Windows
+source venv/bin/activate  # Mac/Linux
 ```
 
 **3. Install dependencies**
@@ -111,14 +149,12 @@ streamlit run streamlit_app/home.py
 
 ---
 
-## ✨ Features
+## ☁️ Deployment
 
-- 🔀 Adaptive query routing (3 routes)
-- 📄 PDF and TXT document upload & indexing
-- ✅ Document relevance grading
-- 🔁 Automatic query rewriting
-- 💬 Persistent chat history per session
-- 🌐 Real-time web search integration
+| Service  | Platform       | URL |
+|----------|----------------|-----|
+| Backend  | Railway        | `https://web-production-c7b0c.up.railway.app` |
+| Frontend | Streamlit Cloud | [Live App](https://adaptiverag-2exurkjkfenfsb6n7mcpcp.streamlit.app/chat) |
 
 ---
 
